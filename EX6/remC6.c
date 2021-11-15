@@ -51,11 +51,11 @@ int main(int argc, char const *argv[])
 
     }
 
-    pourcHommes = (nHomme / nTotal) *100;
-    pourcFemmes = (nFemme / nTotal) *100;
+    pourcHommes = ((float)nHomme / (float)nTotal) *100;
+    pourcFemmes = ((float)nFemme / (float)nTotal) *100;
     ageMoy = ageTot / nTotal;
 
-    fprintf(fres, "Pourcentage d'hommes: %f\n", pourcHommes);
+    fprintf(fres, "Pourcentage d'hommes: %.1f\n", pourcHommes);
     fprintf(fres, "Moyenne d'âge: %d\n", ageMoy);
 
     if (nEnfants>nAdultes)
