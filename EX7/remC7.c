@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
 
     while(nCandidat != -1)
     {
-        printf("Candidat numéro %d - %d\n", nCandidat, (nVoixAct - nVoix));
+        fprintf(fres, "Candidat numéro %d - %d\n", nCandidat, (nVoixAct - nVoix));
 
         if (comp < (nVoixAct - nVoix)) 
         {   
@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
 
         fscanf(fdat, "%d%d%d", &nCandidat, &nVoix, &nVoixAct);
     }
-    printf("Candidat le plus surpris: %d\n", mCandidat);
+    fprintf(fres, "Candidat le plus surpris: %d\n", mCandidat);
 
     return 0;
 }
