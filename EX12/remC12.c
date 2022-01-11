@@ -22,16 +22,16 @@ int main(int argc, char const *argv[])
 
     // Déclaration des variable
 
-    int nombre,i, nblettre[31] = {0};
+    int nombre, nblettre[31] = {0};
 
     // récupération des données
-    for ( i = 1; i <= 75; i++)
+    for (int i = 1; i <= 75; i++)
     {
         fscanf(fdat, "%2d ",&nombre);
         nblettre[nombre] += 1;
     }
 
-    for ( i = 1; i <= 30; i++)
+    for (int i = 1; i <= 30; i++)
     {
         fprintf(fres, "%02d    %2d\n", i, nblettre[i]);
     }
