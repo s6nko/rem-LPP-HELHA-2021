@@ -30,16 +30,16 @@ int main(int argc, char const *argv[])
     }
     moyAmendes = totAmendes / 7;
 
-    printf("Lundi : %.1f\n", jSemaine[0]);
-    printf("Mardi : %.1f\n", jSemaine[1]);
-    printf("Mercredi : %.1f\n", jSemaine[2]);
-    printf("Jeudi : %.1f\n", jSemaine[3]);
-    printf("Vendredi : %.1f\n", jSemaine[4]);
-    printf("Samedi : %.1f\n", jSemaine[5]);
-    printf("Dimanche : %.1f\n", jSemaine[6]);
-    printf("\n");
-    printf("Moyenne des amendes : %.1f\n", moyAmendes);
-    printf("Plus grosse amende : %.1f, le %d\n", JourPGrosseAmende, nJourPGrosseAmende);
+    fprintf(fres, "Lundi : %.1f\n", jSemaine[0]);
+    fprintf(fres, "Mardi : %.1f\n", jSemaine[1]);
+    fprintf(fres, "Mercredi : %.1f\n", jSemaine[2]);
+    fprintf(fres, "Jeudi : %.1f\n", jSemaine[3]);
+    fprintf(fres, "Vendredi : %.1f\n", jSemaine[4]);
+    fprintf(fres, "Samedi : %.1f\n", jSemaine[5]);
+    fprintf(fres, "Dimanche : %.1f\n", jSemaine[6]);
+    fprintf(fres, "\n");
+    fprintf(fres, "Moyenne des amendes : %.1f\n", moyAmendes);
+    fprintf(fres, "Plus grosse amende : %.1f, le %d\n", JourPGrosseAmende, nJourPGrosseAmende);
 
 
     
