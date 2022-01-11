@@ -18,25 +18,25 @@ int main(int argc, char const *argv[])
     }
 
 
-    printf("=======CERTIFICAT MEDICAL===========\n");
+    fprintf(fres, "=======CERTIFICAT MEDICAL===========\n");
     for (int y = 0; y < 20; y++)
     {
         if(lCode[y] == 1)
-            printf("%d\n", lMatricule[y]);
+            fprintf(fres, "%d\n", lMatricule[y]);
     }
-    printf("=======DOCUMENT OFFICIEL===========\n");
+    fprintf(fres, "=======DOCUMENT OFFICIEL===========\n");
 
     for (int y = 0; y < 20; y++)
     {
         if(lCode[y] == 2)
-            printf("%d\n", lMatricule[y]);
+            fprintf(fres, "%d ", lMatricule[y]);
     }
-    printf("======INJUSTIFIÉ============\n");
+    fprintf(fres, "\n======INJUSTIFIÉ============\n");
 
-    for (int y = 0; y < 20; y++)
+    for (int y = 0; y < 15; y++)
     {
         if(lCode[y] == 3)
-            printf("%d\n", lMatricule[y]);
+            fprintf(fres, "%d %d %d\n", lMatricule[y], lMatricule[y+1], lMatricule[y+2]);
     }
 
 
