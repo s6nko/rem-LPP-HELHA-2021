@@ -15,8 +15,6 @@ int main(int argc, char const *argv[])
     int artMoinsCher;
     float prixMoinsCher;
 
-    float 
-
     for (int i = 0; i < 10; i++) 
     {
         fscanf(fdat, "%3d", &nArticle);
