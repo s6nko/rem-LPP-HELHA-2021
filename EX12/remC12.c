@@ -15,23 +15,26 @@ d’enveloppes reçues. Une boîte aux lettres par record.*/
 int main(int argc, char const *argv[])
 {
     
-    FILE* fdat = fopen("remC12.dat", "r");
-    FILE* fres = fopen("remC12.res", "w");
+    FILE *fdat,  *fres;
 
-    int nombre, nblettre[31];
+    fdat = fopen("remC12.dat","r");
+    fres = fopen("remC12.res","w");
 
-    
-    for (int i = 1; i <= 75; i++)
+    // Déclaration des variable
+
+    int nombre,i, nblettre[31] = {0};
+
+    // récupération des données
+    for ( i = 1; i <= 75; i++)
     {
-        fscanf(fdat, "%2d ", &nombre);
+        fscanf(fdat, "%2d ",&nombre);
         nblettre[nombre] += 1;
     }
 
-    for (int i = 1; i <= 30; i++)
+    for ( i = 1; i <= 30; i++)
     {
         fprintf(fres, "%02d    %2d\n", i, nblettre[i]);
     }
-
 
     return 0;
 }
